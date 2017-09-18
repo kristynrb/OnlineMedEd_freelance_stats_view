@@ -1,0 +1,444 @@
+/* ----------- Palette ----------- */
+$blue1: #02BAE4;
+$gray1: #4A4A4A;
+$gray2: #595959;
+$gray3: #A6A6A6;
+$white1: #FFFFFF;
+$gray4: #BFBFBF;
+$gray5: #ddd;
+$gray6: #F6F6F6;
+
+
+$primaryTextColor: $gray1;
+$secondaryTextColor: $blue1;
+$navAndTitleTextColor: $gray2;
+$graphNumberTextColor: $gray3;
+$backgroundColor: $gray6;
+
+
+$primaryCardColor: $white1;
+$progressBarColor: $blue1;
+$tabPillColor: $gray4;
+
+$primaryFontFamily: 'Lato-Regular';
+$primaryFontSize: 14px;
+$navFontSize: 18px;
+$cardTitleFontSize: 18px;
+$primaryResponsiveFontSize: 11px;
+
+/* ----------- Root ----------- */
+#root {
+  background-color: $backgroundColor;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  font-family: $primaryFontFamily;
+  font-size: $primaryFontSize;
+  color: $primaryTextColor;
+  padding: 5%;
+  justify-content: center;
+}
+
+/* ----------- Main ----------- */
+#main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 1116px;
+}
+
+/* ----------- Navigation ----------- */
+.nav {
+  &-container {
+    width: 250px;
+    order: -1;
+  }
+  &-links {
+    font-size: $navFontSize;
+    color: $navAndTitleTextColor;
+    letter-spacing: 0;
+    padding: 12px;
+    list-style: none;
+  }
+}
+
+/* ----------- Cards ----------- */
+.card {
+  &-header{
+    background-color: $primaryCardColor;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);
+    font-size: $cardTitleFontSize;
+    color: $navAndTitleTextColor;
+    letter-spacing: 0;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  &-content{
+    justify-content: center;
+    background-color: $primaryCardColor;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  &-content:last-child {
+    margin-bottom: 55px;
+  }
+
+  &-container {
+    display: flex;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+    background-color: $primaryCardColor;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,0.20);
+    height: auto;
+    margin-bottom: 20px;
+    margin-right:0;
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+/* ----------- Graph ----------- */
+.graph {
+  &-nav-parent {
+    display: flex;
+    justify-content: center;
+    margin: -5px 0px 15px 0px;
+  }
+
+  &-nav-pills {
+    width: 626px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+
+    >li + li {
+      margin: 0;
+    }
+  }
+
+  &-nav-pills>li.active>a, &-nav-pills>li.active>a:focus, &-nav-pills>li.active>a:hover {
+    background-color: $tabPillColor;
+  }
+
+  &-pill {
+    a {
+      font-size: $primaryFontSize;
+      color: $graphNumberTextColor;
+      letter-spacing: 0;
+      border: 2px solid $tabPillColor;
+      width: 150px;
+      text-align: center;
+    }
+  }
+
+  &-progress-labels {
+    display: flex;
+    justify-content: space-between;
+    color: $graphNumberTextColor;
+    font-size: 12px;
+    letter-spacing: 0.14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $gray5;
+  }
+
+  &-progress {
+    background-color: $primaryCardColor;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    margin-bottom: 0;
+
+    .progress-bar {
+      background-color: $progressBarColor;
+      border-radius: 4px;
+    }
+  }
+
+  &-progress-title {
+    font-size: $primaryFontSize;
+    color: $navAndTitleTextColor;
+    letter-spacing: 0;
+  }
+}
+
+/* Graph - Bootstrap ids and classes */
+#tab-headers-tab-first {
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-right: 0;
+}
+
+#tab-headers-tab-second {
+  border-right: 0;
+}
+
+#tab-headers-tab-fourth {
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  border-left: 0;
+}
+
+.tab-pane {
+  & > div {
+    border-bottom: 1px solid $gray5;
+    padding-bottom: 8px;
+  }
+}
+
+.panel-default {
+  border: 0;
+  border-radius: 0;
+}
+
+ul.graph-nav-pills {
+  margin-before: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.nav-pills>li>a {
+  border-radius: 0;
+}
+
+/* ----------- Tables ----------- */
+#DataTables_Table_0_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap;
+}
+
+tr:last-child {
+  border-bottom: 1px solid $gray5;
+}
+
+td:last-child {
+  color: $secondaryTextColor
+}
+
+/* ----------- Responsive Styles ----------- */
+@media only screen and (max-width: 600px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .card {
+    &-content {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .nav {
+    &-container {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &-links {
+      font-size: 8px;
+    }
+  }
+  #main {
+    max-width: 600px;
+    margin: auto;
+  }
+
+  .graph {
+    &-pill {
+      a {
+        font-size: 7px;
+        width: 130px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+/* Portrait */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .card {
+    &-content {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: $primaryResponsiveFontSize;
+    }
+    &-header{
+      font-size: 16px;
+    }
+  }
+
+  .nav {
+    &-container {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &-links {
+      font-size: 9px;
+    }
+  }
+
+  #main {
+    max-width: 320px;
+    margin: auto;
+  }
+
+  .graph {
+    &-pill {
+      a {
+        font-size: 8px;
+        width: 67px;
+        text-align: center;
+      }
+    }
+    &-nav-pills {
+      height: auto;
+      margin-bottom: 0;
+    }
+    &-progress-labels {
+      font-size: $primaryResponsiveFontSize;
+    }
+    &-progress-title {
+      font-size: $primaryResponsiveFontSize;
+    }
+  }
+  .nav-pills>li>a {
+    padding: 3px;
+  }
+}
+
+
+/* Landscape */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 568px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  #main {
+    max-width: 568px;
+    margin: auto;
+  }
+}
+
+/* ----------- iPhone 6 ----------- */
+
+/* Portrait */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: portrait) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .card {
+    &-content {
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: $primaryResponsiveFontSize;
+    }
+    &-header{
+      font-size: 16px;
+    }
+  }
+
+  .nav {
+    &-container {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &-links {
+      font-size: 9px;
+    }
+  }
+
+  #main {
+    max-width: 375px;
+    margin: auto;
+  }
+
+  .graph {
+    &-pill {
+      a {
+        font-size: 8px;
+        width: 67px;
+        text-align: center;
+      }
+    }
+    &-nav-pills {
+      height: auto;
+      margin-bottom: 0;
+    }
+    &-progress-labels {
+      font-size: $primaryResponsiveFontSize;
+    }
+    &-progress-title {
+      font-size: $primaryResponsiveFontSize;
+    }
+  }
+  .nav-pills>li>a {
+    padding: 3px;
+  }
+}
+
+/* Landscape */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2)
+and (orientation: landscape) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0;
+  }
+
+  .nav {
+    &-container {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+    &-links {
+      font-size: 9px;
+    }
+  }
+
+  #main {
+    max-width: 667px;
+    margin: auto;
+  }
+}

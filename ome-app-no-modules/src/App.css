@@ -1,0 +1,286 @@
+/* ----------- Palette ----------- */
+/* ----------- Root ----------- */
+#root {
+  background-color: #F6F6F6;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: row;
+  font-family: "Lato-Regular";
+  font-size: 14px;
+  color: #4A4A4A;
+  padding: 5%;
+  justify-content: center; }
+
+/* ----------- Main ----------- */
+#main {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  max-width: 1116px; }
+
+/* ----------- Navigation ----------- */
+.nav-container {
+  width: 250px;
+  order: -1; }
+.nav-links {
+  font-size: 18px;
+  color: #595959;
+  letter-spacing: 0;
+  padding: 12px;
+  list-style: none; }
+
+/* ----------- Cards ----------- */
+.card-header {
+  background-color: #FFFFFF;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  font-size: 18px;
+  color: #595959;
+  letter-spacing: 0;
+  margin-bottom: 10px;
+  display: flex; }
+.card-content {
+  justify-content: center;
+  background-color: #FFFFFF;
+  margin-left: 40px;
+  margin-right: 40px; }
+.card-content:last-child {
+  margin-bottom: 55px; }
+.card-container {
+  display: flex;
+  flex-flow: column nowrap;
+  flex-grow: 1;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  height: auto;
+  margin-bottom: 20px;
+  margin-right: 0;
+  margin-left: 0;
+  justify-content: center; }
+
+/* ----------- Graph ----------- */
+.graph-nav-parent {
+  display: flex;
+  justify-content: center;
+  margin: -5px 0px 15px 0px; }
+.graph-nav-pills {
+  width: 626px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 20px; }
+  .graph-nav-pills > li + li {
+    margin: 0; }
+.graph-nav-pills > li.active > a, .graph-nav-pills > li.active > a:focus, .graph-nav-pills > li.active > a:hover {
+  background-color: #BFBFBF; }
+.graph-pill a {
+  font-size: 14px;
+  color: #A6A6A6;
+  letter-spacing: 0;
+  border: 2px solid #BFBFBF;
+  width: 150px;
+  text-align: center; }
+.graph-progress-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #A6A6A6;
+  font-size: 12px;
+  letter-spacing: 0.14px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd; }
+.graph-progress {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  margin-bottom: 0; }
+  .graph-progress .progress-bar {
+    background-color: #02BAE4;
+    border-radius: 4px; }
+.graph-progress-title {
+  font-size: 14px;
+  color: #595959;
+  letter-spacing: 0; }
+
+/* Graph - Bootstrap ids and classes */
+#tab-headers-tab-first {
+  border-top-left-radius: 2em;
+  border-bottom-left-radius: 2em;
+  border-right: 0; }
+
+#tab-headers-tab-second {
+  border-right: 0; }
+
+#tab-headers-tab-fourth {
+  border-top-right-radius: 2em;
+  border-bottom-right-radius: 2em;
+  border-left: 0; }
+
+.tab-pane > div {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 8px; }
+
+.panel-default {
+  border: 0;
+  border-radius: 0; }
+
+ul.graph-nav-pills {
+  margin-before: 0;
+  margin-left: 0;
+  margin-right: 0; }
+
+.nav-pills > li > a {
+  border-radius: 0; }
+
+/* ----------- Tables ----------- */
+#DataTables_Table_0_wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row nowrap; }
+
+tr:last-child {
+  border-bottom: 1px solid #ddd; }
+
+td:last-child {
+  color: #02BAE4; }
+
+/* ----------- Responsive Styles ----------- */
+@media only screen and (max-width: 600px) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0; }
+
+  .card-content {
+    margin-left: 10px;
+    margin-right: 10px; }
+
+  .nav-container {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .nav-links {
+    font-size: 8px; }
+
+  #main {
+    max-width: 600px;
+    margin: auto; }
+
+  .graph-pill a {
+    font-size: 7px;
+    width: 130px;
+    text-align: center; } }
+/* ----------- iPhone 5 and 5S ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0; }
+
+  .card-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 11px; }
+  .card-header {
+    font-size: 16px; }
+
+  .nav-container {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .nav-links {
+    font-size: 9px; }
+
+  #main {
+    max-width: 320px;
+    margin: auto; }
+
+  .graph-pill a {
+    font-size: 8px;
+    width: 67px;
+    text-align: center; }
+  .graph-nav-pills {
+    height: auto;
+    margin-bottom: 0; }
+  .graph-progress-labels {
+    font-size: 11px; }
+  .graph-progress-title {
+    font-size: 11px; }
+
+  .nav-pills > li > a {
+    padding: 3px; } }
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #main {
+    max-width: 568px;
+    margin: auto; } }
+/* ----------- iPhone 6 ----------- */
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0; }
+
+  .card-content {
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 11px; }
+  .card-header {
+    font-size: 16px; }
+
+  .nav-container {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .nav-links {
+    font-size: 9px; }
+
+  #main {
+    max-width: 375px;
+    margin: auto; }
+
+  .graph-pill a {
+    font-size: 8px;
+    width: 67px;
+    text-align: center; }
+  .graph-nav-pills {
+    height: auto;
+    margin-bottom: 0; }
+  .graph-progress-labels {
+    font-size: 11px; }
+  .graph-progress-title {
+    font-size: 11px; }
+
+  .nav-pills > li > a {
+    padding: 3px; } }
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  #root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0; }
+
+  .nav-container {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+  .nav-links {
+    font-size: 9px; }
+
+  #main {
+    max-width: 667px;
+    margin: auto; } }
+
+/*# sourceMappingURL=App.css.map */
