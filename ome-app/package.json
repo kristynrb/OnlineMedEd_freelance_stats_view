@@ -7,6 +7,13 @@
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0"
   },
+  {
+  "buildpacks": [
+    {
+      "url": "https://github.com/mars/create-react-app-buildpack"
+    }
+  ]
+},
   "devDependencies": {
     "autoprefixer": "7.1.0",
     "babel-core": "6.24.1",
