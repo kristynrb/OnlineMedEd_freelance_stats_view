@@ -100,12 +100,6 @@ module.exports = {
       new ModuleScopePlugin(paths.appSrc),
     ],
   },
-  loaders: [
-  // Loading SCSS
-  {
-    test: /\.scss$/,
-    loaders: ["style-loader", "css-loader", "sass-loader"]
-  }],
   module: {
     strictExportPresence: true,
     rules: [
@@ -220,6 +214,16 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.LoaderOptionsPlugin({
+      options: {
+	loaders: [
+	// Loading SCSS
+	{
+	  test: /\.scss$/,
+	  loaders: ["style-loader", "css-loader", "sass-loader"]
+	}],
+      }
+    }),
     // Makes some environment variables available in index.html.
     // The public URL is available as %PUBLIC_URL% in index.html, e.g.:
     // <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
