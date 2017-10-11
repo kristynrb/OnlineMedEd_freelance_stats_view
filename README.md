@@ -1,5 +1,5 @@
 # OnlineMedEd Stats View
-_Freelance work for OnlineMedEd - stats view page_
+_Freelance work for OnlineMedEd - Performance View_
 
 ## Technologies
 - HTML5
