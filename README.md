@@ -1,4 +1,4 @@
-# OnlineMedEd Stats View
+# OnlineMedEd Performance View
 _Freelance work for OnlineMedEd - Performance View_
 
 ## Technologies
